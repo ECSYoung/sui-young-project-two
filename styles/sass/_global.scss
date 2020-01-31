@@ -1,0 +1,95 @@
+ /****** GENERAL STYLING ******/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 85vw;
+    max-width: 1950px;
+    margin: 0 auto;
+}
+
+/* FONT STYLING */
+
+h1, h2, h3, h4, p, a, li, ul {
+    line-height: 26px;
+}
+
+h1, h2, h3, h4, h5, a {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+h2 {
+    @include fluid-type (4rem, 5rem, 360px, 1950px);
+    margin: 3rem 0 0 0;
+}
+
+p { 
+    font-family: 'Cabin', sans-serif;
+    @include fluid-type (2rem, 3.5rem, 360px, 1950px);
+    margin: 3rem 0;
+    line-height: 3rem;
+}
+
+.pBreak2 {
+    display: block;
+    word-wrap: break-word;
+    width: 100%;
+    display: block;
+}
+
+
+
+li, 
+ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+i {
+    color: black;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+button {
+    font-family: 'Oswald', sans-serif;
+    @include box (25rem, 5rem);
+    background: #F38D8D;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.visually-hidden:not(:focus):not(:active) { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+.pBreak {
+    display: block;
+    margin: 3rem 0;
+    word-wrap: break-word;
+}

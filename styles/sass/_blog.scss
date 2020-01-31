@@ -1,0 +1,139 @@
+// SCSS for blog.html
+// ◘◘◘◘ HOME PAGE ◘◘◘◘
+
+// ••• Header and Navigation 
+.otherHeader {
+    height: 60vh;
+    background: url(../../assets/blog-image-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .navBar {
+        @include box (100vw, 7rem);
+        background: #B9DDE7;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav {
+        height: 6rem;
+        padding-top: 1rem;
+    }
+
+    h1 {
+        position: absolute;
+        top: 57vh;
+        left: 8.5vw;
+        @include fluid-type (60px, 100px, 360px, 1950px);
+    }
+}
+
+.mainBody {
+    background: #f6f6f6;
+
+    div {
+        padding: 5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 0 auto;
+
+        .blogAside {
+            width: 28%;
+
+            div {
+                margin: 2rem;
+                background: white;
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    @include fluid-type (18px, 22px, 360px, 1950px);
+                    margin-bottom: 3rem;
+                }
+
+                p {
+                    margin: 0;
+                }
+
+                a {
+                    text-transform: none;
+                    color: #68B0C1;
+                }
+            }
+
+            .aside2 {
+
+                li {
+                    display: flex;
+                }
+
+                li:before {
+                    content: '\00b7';
+                    font-size: 40px;
+                    margin: 0 0.5rem;
+                    display: flex;
+                    align-items: center;
+                }
+
+
+            }
+        }
+
+        main {
+            width: 70%;
+            margin: 2rem 0 0 0;
+
+            .blogBox {
+                background: white;
+                border-bottom: 3px solid #227284;
+
+                h4 {
+                    @include fluid-type (35px, 45px, 360px, 1950px);
+                    margin-bottom: 1.5rem;
+                    display: block;
+                    width: 100%;
+                }
+
+                p {
+                    line-height: 32px;
+                }
+
+
+            }
+        }
+    }
+}
+
+.comments {
+    margin-top: 5rem;
+
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+
+        .commentImgDiv {
+            @include box (100px, 100px);margin: 4rem auto;
+
+        }
+
+        .commentText {
+            width: 80%;
+        }
+    }
+
+    .commentParent1,
+    .commentParent {
+        background: white;
+        padding: 3rem;
+    }
+
+    .commentParent {
+        margin-top: 2rem;
+        border-bottom: 3px solid #227284;
+        margin-bottom: 5rem;
+    }
+}
+

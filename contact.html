@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Kit from Font Awesome -->
+    <script src="https://kit.fontawesome.com/dfdc9c622d.js" crossorigin="anonymous"></script>
+
+    <!-- Google Font Script -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Oswald:400,700&display=swap" rel="stylesheet">
+    <!-- 
+                font-family: 'Cabin', sans-serif;
+                font-family: 'Oswald', sans-serif;
+            -->
+
+    <!-- link style sheet -->
+    <link rel="stylesheet" type="text/css" href="./styles/sass/styles.css">
+
+    <title>Harper's Contact</title>
+</head>
+
+<body>
+    <Header class="otherHeader2">
+        <div class="navBar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="index.html#About">about</a></li>
+                    <li><Span>
+                            <h2>Harper</h2>
+                        </Span></li>
+                    <li><a href="./blog.html">blog</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Contact</h1>
+    </Header>
+
+    <section class="mainBody">
+        <div class="wrapper ">
+            <section class="contactGrid">
+                <section class="contactAside">
+
+                    <div class="asideParent">
+
+                        <section class="contactSocialIcon">
+                            <ul>
+                                <li><a href="http://www.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="http://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="http://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="http://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </section>
+
+                        <p>
+                            <span class="pBreak3">info@email.com</span>
+                            <span class="pBreak2">123 - 456 - 7890</span>
+                            <span class="pBreak2">123 Queen Street West, Unit 10</span>
+                            <Span class="pBreak2">Toronto, Ontario</Span>
+                            <span class="pBreak2">M5V2D5</span>
+                        </p>
+
+                    </div>
+                </section>
+                
+                <section class="contactMain">
+
+                    <form>
+                    
+                        <!-- 2x Input for name and email address -->
+                        <label for="name" class="visually-hidden">Name:</label>
+                        <input type="text" value="name" placeholder="Name" required="true" id="name" class="idField">
+                    
+                        <label for="email" class="visually-hidden">Email:</label>
+                        <input type="email" value="email" placeholder="Email address" required="true" id="email" class="idField">
+                    
+                    
+                        <!-- large textbox input for comment -->
+                        <textarea name="comments" placeholder="Message" cols="30" rows="10" class="textField"></textarea>
+                    
+                        <button class="commentButton" type="submit">Post Comment</button>
+                    </form>
+                </section>
+            </section>
+        </div>
+    <footer>
+        <p>Copyright © 2018 HackerYou</p>
+    </footer>
+</body>
+</html>

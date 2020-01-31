@@ -1,0 +1,7 @@
+// Media Queries
+
+@media (max-width: 1200px) {
+    html {
+        font-size: calc($fontSize + 3.3vw)
+    }
+}

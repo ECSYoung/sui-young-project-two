@@ -1,0 +1,23 @@
+// Styling for Comment form
+
+form {
+    width: 100%;
+    height: 35vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    grid-gap: 15px;
+
+    .textField {
+        grid-area: 2 / span 2;
+    }
+
+    .commentButton {
+        grid-area: 3 / span 2;
+        width: 100%;
+    }
+
+    &::placeholder {
+        @include fluid-type (90px, 160px, 360px, 1950px);
+    }
+}

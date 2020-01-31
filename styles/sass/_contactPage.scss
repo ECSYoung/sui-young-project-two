@@ -1,0 +1,74 @@
+// styling for contact.html
+
+// use same stylings for the header in blog.index, and change the background image.
+.otherHeader2 {
+    @extend .otherHeader;
+    background: url(../../assets/contact-image-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: 28% 1fr;
+    grid-template-rows: 60vh;
+    grid-gap: 15px;
+    width: 100%;
+}
+
+
+// style the aside section with the social media and contact info.
+.contactAside {
+    width: 100%;
+    grid-area: 1 / 1;
+}
+
+.asideParent {
+    background: white;
+}
+
+.contactSocialIcon {
+    padding: 0;
+    margin: 0;
+
+    ul {
+        display: flex;
+        width: 100%;
+
+        li {
+            margin: 0 1rem;
+        }
+
+        a {
+            padding: 1rem;
+
+            i {
+                @include fluid-type (25px, 30px, 360px, 1950px);
+                color: #227284;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+.pBreak3 {
+    @extend .pBreak2;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+}
+
+
+
+// alter properties for this contact form specifically. Cascade principles to override existing, while leaving the original form with the blog.index page unaltered.
+.contactMain {
+    width: 100%;
+    grid-area: 1 / 2;
+}
+
+form {
+    height: 60vh;
+    margin-top: 0
+}

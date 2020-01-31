@@ -1,0 +1,225 @@
+// SCSS for index.html
+// ◘◘◘◘ HOME PAGE ◘◘◘◘
+
+// ••• Header and Navigation 
+header {
+    height: 80vh;
+    background-color: #B9DDE7;
+    display: flex;
+    text-align: center;
+}
+
+.headerDiv {
+    @include flexCenter;
+    flex-direction: column;
+}
+
+.headerFlex {
+    @include flexCenter;
+    position: relative;
+    top: 1vh;
+    width: 100%;
+
+    .headerFlexContainer {
+        @include flexCenter;
+    }
+}
+
+// Increase image size > parent div, padding to shift image right and down to hide white edges. Transform and shift container box with white background to simulate box-shadow.
+.headerimg {
+    @include box (52rem, 70rem);
+    flex-shrink: 0;
+    @include shift (5%, 5%);
+    background-color: white;
+    margin: 0 2rem;
+    bottom: 5rem;
+
+    img {
+        object-position: 23px 23px;
+        padding: 0 20px 20px 0;
+        @include box (calc(100% + 45px), calc(100% + 45px));
+        margin: -22px;
+        @include shift (-20px, -20px);
+    }
+}
+
+
+h1 {
+    @include fluid-type (90px, 160px, 360px, 1950px);
+    margin: 0 5rem;
+}
+
+.headerCircle {
+    width: calc(10.5vw + 2px);
+    position: relative;
+    right: calc(10vw + 1.5px);
+    bottom: calc(5vh + 1.5px);
+}
+
+
+// ••• ABOUT SECTION/MAIN
+#About {
+    height: 50vh;
+    padding: calc(1vw * 2rem) 0;
+    background: #F6F6F6;
+    @include flexCenter;
+    justify-content: flex-end;
+
+    div {
+        width: 40%;
+        margin: auto 15rem;
+    }
+}
+
+// ••• ASIDENAV SECTION/MAIN
+.asidenav {
+    background: #F6F6F6;
+
+    img {
+        width: 100%;
+    }
+}
+
+// parent div to the content under the image
+.iconparent {
+    padding: 10rem;
+}
+
+// parent div to 2 sections
+.flexIconParent {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 15px;
+
+    // i and circle
+    .flexIcon {
+        display: flex;
+        width: 100%;
+
+        // blue circle
+        .iconborder {
+            @include box (5rem, 5rem);
+            border-radius: 50%;
+            background: #B9DDE7;
+            @include flexCenter;
+            margin: 3rem;
+            align-self: flex-start;
+
+            i {
+                font-size: 2rem;
+                margin: 0;
+            }
+        }
+
+        // p and h2 width
+        .iconTextwidth {
+            width: 80%;
+            text-align: justify;
+        }
+    }
+}
+
+// ••• BLOG SECTION/MAIN
+#Blog {
+    background: white;
+
+    .blogParentBox {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(550px, 48%));
+        grid-gap: 10px;
+        margin: 0 auto;
+        position: relative;
+
+        .blogImg img,
+        .blogImg2 img {
+            min-width: 85%;
+        }
+
+        .blogImg {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .blogBoxShadowBlue {
+            background: #227284;
+            position: relative;
+            width: 800px;
+
+        }
+
+        .blogBoxShadowLightBlue {
+            background: #B9DDE7;
+            position: absolute;
+            width: 100%;
+        }
+
+        .textWidth2,
+        .textWidth3 {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+        }
+
+        .textWidth3 {
+            width: 90%;
+        }
+
+        .textWidth2 {
+            padding: 0 0 0 5rem;
+            width: 100%;
+        }
+
+
+    }
+}
+
+
+// ••• JOURNEY SECTION/MAIN
+.journey {
+    height: 60vh;
+    background: #F6F6F6;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .journeyImage {
+        @include box (30rem, 30rem);
+        background: #227284;
+
+
+        img {
+            @include shift (-5%, -5%);
+        }
+    }
+
+    .textWidth {
+        width: 55%;
+
+        h2 {
+            margin: 0;
+        }
+    }
+}
+
+// ••• GALLERY SECTION/MAIN
+.gallery {
+    background: white;
+
+    .galleryParent {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        grid-gap: 30px;
+        padding: 10rem;
+
+        .imgHouse {
+            transition: transform 0.5s;
+            margin: auto;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
