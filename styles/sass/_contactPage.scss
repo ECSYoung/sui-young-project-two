@@ -10,22 +10,22 @@
 }
 
 .contactGrid {
-    display: grid;
-    grid-template-columns: 28% 1fr;
-    grid-template-rows: 60vh;
-    grid-gap: 15px;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 8rem;
 }
 
 
 // style the aside section with the social media and contact info.
 .contactAside {
-    width: 100%;
-    grid-area: 1 / 1;
+    width: 28%;
 }
 
 .asideParent {
     background: white;
+    padding: 2rem;
 }
 
 .contactSocialIcon {
@@ -34,10 +34,11 @@
 
     ul {
         display: flex;
+        flex-wrap: wrap;
         width: 100%;
 
         li {
-            margin: 0 1rem;
+            margin: 1rem;
         }
 
         a {
@@ -64,11 +65,10 @@
 
 // alter properties for this contact form specifically. Cascade principles to override existing, while leaving the original form with the blog.index page unaltered.
 .contactMain {
-    width: 100%;
-    grid-area: 1 / 2;
-}
+    width: 70%;
 
-form {
-    height: 60vh;
-    margin-top: 0
+    form {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
 }

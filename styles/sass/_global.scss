@@ -12,6 +12,7 @@ html {
 
 body {
     overflow-x: hidden;
+    background: #f6f6f6;
 }
 
 .wrapper {
@@ -33,26 +34,35 @@ h1, h2, h3, h4, h5, a {
     text-decoration: none;
 }
 
+.whiteActive {
+    color: white;
+}
+
 h2 {
     @include fluid-type (4rem, 5rem, 360px, 1950px);
     margin: 3rem 0 0 0;
 }
 
+h3 {
+    @include fluid-type (18px, 22px, 360px, 1950px);
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+h4 {
+    @include fluid-type (35px, 45px, 360px, 1950px);
+    margin-bottom: 1.5rem;
+    display: block;
+    width: 100%;
+}
+
 p { 
     font-family: 'Cabin', sans-serif;
     @include fluid-type (2rem, 3.5rem, 360px, 1950px);
-    margin: 3rem 0;
+    margin: 0;
+    text-align: left;
     line-height: 3rem;
 }
-
-.pBreak2 {
-    display: block;
-    word-wrap: break-word;
-    width: 100%;
-    display: block;
-}
-
-
 
 li, 
 ul {
@@ -65,6 +75,13 @@ i {
 }
 
 img {
+    width: 100%;
+    display: block;
+}
+
+.pBreak2 {
+    display: block;
+    word-wrap: break-word;
     width: 100%;
     display: block;
 }

@@ -27,12 +27,12 @@ header {
 
 // Increase image size > parent div, padding to shift image right and down to hide white edges. Transform and shift container box with white background to simulate box-shadow.
 .headerimg {
-    @include box (52rem, 70rem);
-    flex-shrink: 0;
+    @include box (25vw, 35vw);
+    position: relative;
+    bottom: -5rem;
     @include shift (5%, 5%);
     background-color: white;
     margin: 0 2rem;
-    bottom: 5rem;
 
     img {
         object-position: 23px 23px;
@@ -114,8 +114,9 @@ h1 {
 
         // p and h2 width
         .iconTextwidth {
-            width: 80%;
+            width: 90%;
             text-align: justify;
+            padding-right: 3rem;
         }
     }
 }
@@ -123,56 +124,54 @@ h1 {
 // ••• BLOG SECTION/MAIN
 #Blog {
     background: white;
-
-    .blogParentBox {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(550px, 48%));
-        grid-gap: 10px;
-        margin: 0 auto;
-        position: relative;
-
-        .blogImg img,
-        .blogImg2 img {
-            min-width: 85%;
-        }
-
-        .blogImg {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .blogBoxShadowBlue {
-            background: #227284;
-            position: relative;
-            width: 800px;
-
-        }
-
-        .blogBoxShadowLightBlue {
-            background: #B9DDE7;
-            position: absolute;
-            width: 100%;
-        }
-
-        .textWidth2,
-        .textWidth3 {
-            display: flex;
-            flex-direction: column;
-            align-self: center;
-        }
-
-        .textWidth3 {
-            width: 90%;
-        }
-
-        .textWidth2 {
-            padding: 0 0 0 5rem;
-            width: 100%;
-        }
-
-
-    }
 }
+
+.blogParentBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    grid-gap: 15px;
+    margin: 0 auto;
+
+    .blogImg img,
+    .blogImg2 img {
+        min-width: 85%;
+    }
+
+    .blogImg {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .imgShadow {
+        box-shadow: -150px 20px #227284, 20px 20px #227284;
+        @include shift (2rem, -5rem)
+    }
+
+    .imgShadow2 {
+        box-shadow: 150px 20px #B9DDE7, 20px 20px #B9DDE7;
+        @include shift (2rem, 5rem)
+    }
+
+    .textWidth2,
+    .textWidth3 {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .textWidth3 {
+        width: 90%;
+        padding-left: 2%;
+    }
+
+    .textWidth2 {
+        padding: 0 0 0 13%;
+        width: 100%;
+    }
+
+
+}
+
 
 
 // ••• JOURNEY SECTION/MAIN

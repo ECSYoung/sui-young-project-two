@@ -1,7 +1,109 @@
 // Media Queries
+// ** non need for @media (prefers-reduced-motion:reduce)
 
-@media (max-width: 1200px) {
-    html {
-        font-size: calc($fontSize + 3.3vw)
+// ••• Index.html media queries
+// ••• blog.html media queries
+// ••• contact.html
+
+
+@media (max-width: 1360px) {
+
+    // ••• blog.html media queries
+    .blogAside {
+        width: 100vw;
+        min-width: 100vw;
+        margin: 2rem;
+        background: white;
+        display: flex;
+        flex-direction: column;
+
+        .asideDiv {
+
+            h3 {
+                @include fluid-type (18px, 22px, 360px, 1950px);
+                margin-bottom: 3rem;
+            }
+
+            p {
+                margin: 0;
+                text-align: left;
+            }
+
+            a {
+                text-transform: none;
+                color: #68B0C1;
+            }
+        }
+
+        .aside2 {
+
+            li {
+                display: flex;
+            }
+
+
+        }
+    }
+
+    main {
+        width: 70%;
+        margin: 2rem 0 0 0;
+
+        .blogBox {
+            background: white;
+            border-bottom: 3px solid #227284;
+
+            h4 {
+                @include fluid-type (35px, 45px, 360px, 1950px);
+                margin-bottom: 1.5rem;
+                display: block;
+                width: 100%;
+            }
+
+            p {
+                line-height: 32px;
+            }
+
+
+        }
+    }
+
+
+    // ••• contact.html
+    .contactGrid {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 8rem;
+    }
+
+    .contactAside {
+        width: 100%;
+        order: 2;
+        margin-top: 3rem;
+    }
+
+    .contactSocialIcon {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        ul {
+            display: flex;
+            width: 100%;
+
+            li {
+                padding: 1rem;
+            }
+        }
+    }
+
+    .contactMain {
+        width: 100%;
+    }
+
+    .contactList {
+        width: 100%;
+        text-align: center;
     }
 }

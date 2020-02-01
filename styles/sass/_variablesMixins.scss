@@ -1,18 +1,10 @@
 // ○○○ Variables
-%visuallyhidden {
-    margin: -1px;
-    padding: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip: rect(0, 0, 0, 0);
-    position: absolute;
-}
-
-// to use: .visually-hidden { @extend %visuallyhidden; }
-
-
+$duskGreem: #227284;
+$lightBlueGrey: #B9DDE7;
+$greyBlue: #68B0C1;
+$accentColor: #F38D8D;
+$blackColor: #171717;
+$whiteShadeColor: #F6F6F6;
 
 
 // ○○○ mixins

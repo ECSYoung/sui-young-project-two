@@ -32,7 +32,7 @@
                     <li><Span>
                             <h2>Harper</h2>
                         </Span></li>
-                    <li><a href="#">blog</a></li>
+                    <li><a href="#"><span class="whiteActive">blog</span></a></li>
                     <li><a href="contact.html">contact</a></li>
                 </ul>
             </nav>
@@ -41,26 +41,35 @@
     </Header>
 
     <section class="mainBody">
-        <div class="wrapper">
+        <!-- div with flex -->
+        <div class="blogFlex">
+
+            <!-- contains aside content -->
             <aside class="blogAside">
-                <div class="mainBodyDiv">
-                    <img src="assets/blog-image-2.jpg" alt="Image of a young femme appearing person with their eyes closed laying on pale-grey-blue carpet, near where it meets a sky-blue sponge painted wall. Their hair is splayed, and their right arm is poised curved with their palm facing their head. Their left bent at the elbow and lightly touching the left side of their head, as though embracing the air.">
-                    <h3>About Harper</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, beatae! <a href="#">Find out more.</a></p>
+                <div class="aside1">
+                    <div class="asideImg">
+                        <img src="assets/blog-image-2.jpg" alt="Image of a young femme appearing person with their eyes closed laying on pale-grey-blue carpet, near where it meets a sky-blue sponge painted wall. Their hair is splayed, and their right arm is poised curved with their palm facing their head. Their left bent at the elbow and lightly touching the left side of their head, as though embracing the air.">
+                    </div>
+                
+                    <div>
+                        <h3>About Harper</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, beatae! <a href="#">Find out more.</a></p>
+                    </div>
                 </div>
 
                 <div class="aside2">
                     <h3>Recent Posts</h3>
                     <ul>
-                        <li><p>Lorem ipsum dolor sit amet.</p></li>
-                        <li><p>Lorem ipsum dolor sit amet.</p></li>
-                        <li><p>Lorem ipsum dolor sit amet.</p></li>
-                        <li><p>Lorem ipsum dolor sit amet.</p></li>
+                        <li><p> • Lorem ipsum dolor sit amet.</p></li>
+                        <li><p> • Lorem ipsum dolor sit amet.</p></li>
+                        <li><p> • Lorem ipsum dolor sit amet.</p></li>
+                        <li><p> • Lorem ipsum dolor sit amet.</p></li>
                     </ul>
                 </div>
             </aside>
 
-            <main>
+            <!--  -->
+            <main class="blogMain">
                 <div class="blogBox">
                     <h4>My Favourite Travel Destinations</h4>
                     
@@ -114,14 +123,14 @@
 
                             <!-- 2x Input for name and email address -->
                             <label for="name" class="visually-hidden">Name:</label>
-                            <input type="text" value="name" placeholder="Name" required="true" id="name" class="idField">
+                            <input type="text" placeholder="&nbsp;Name" required="true" id="name" class="idField">
 
                             <label for="email" class="visually-hidden">Email:</label>
-                            <input type="email" value="email" placeholder="Email address" required="true" id="email" class="idField">
+                            <input type="email" placeholder="&nbsp;Email address" required="true" id="email" class="idField">
 
 
                             <!-- large textbox input for comment -->
-                            <textarea name="comments" placeholder="Comment" cols="30" rows="10" class="textField"></textarea>
+                            <textarea name="comments" placeholder="&nbsp;Comment" cols="30" rows="10" class="textField"></textarea>
 
                         <button class="commentButton" type="submit">Post Comment</button>
                     </form>

@@ -1,9 +1,9 @@
 // SCSS for blog.html
-// ◘◘◘◘ HOME PAGE ◘◘◘◘
+// ◘◘◘◘ BLOG PAGE ◘◘◘◘
 
 // ••• Header and Navigation 
 .otherHeader {
-    height: 60vh;
+    height: 50vh;
     background: url(../../assets/blog-image-1.jpg);
     background-size: cover;
     background-position: center;
@@ -23,88 +23,76 @@
 
     h1 {
         position: absolute;
-        top: 57vh;
+        top: 48vh;
         left: 8.5vw;
         @include fluid-type (60px, 100px, 360px, 1950px);
     }
 }
 
+// Put background to the main section of the body.
 .mainBody {
     background: #f6f6f6;
 
-    div {
-        padding: 5rem;
+    .blogFlex {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin: 0 auto;
+        justify-content: center;
+        align-content: stretch;
+        align-items: flex-start;
+        margin: 5rem 0 3rem 3rem;
 
         .blogAside {
             width: 28%;
+            max-width: 28%;
+            padding: 4rem;
 
-            div {
-                margin: 2rem;
+            .aside1 {
                 background: white;
-                display: flex;
-                flex-direction: column;
-
-                h3 {
-                    @include fluid-type (18px, 22px, 360px, 1950px);
-                    margin-bottom: 3rem;
-                }
-
-                p {
-                    margin: 0;
-                }
+                padding: 4rem;
 
                 a {
-                    text-transform: none;
-                    color: #68B0C1;
+                    color: $greyBlue;
                 }
             }
 
             .aside2 {
+                background: white;
+                padding: 4rem;
+                margin-top: 3rem;
 
-                li {
-                    display: flex;
+                ul li {
+                    list-style-type: none;
                 }
 
-                li:before {
+                ul li:before {
                     content: '\00b7';
                     font-size: 40px;
-                    margin: 0 0.5rem;
+                    margin: 0 0.25rem;
                     display: flex;
                     align-items: center;
                 }
-
-
             }
         }
 
-        main {
-            width: 70%;
-            margin: 2rem 0 0 0;
+        .asideDiv {
+            width: 28%;
+            background: white;
+            margin-top: 3rem;
+        }
+
+        .blogMain {
+            width: 60%;
+            margin-top: 4rem;
 
             .blogBox {
                 background: white;
-                border-bottom: 3px solid #227284;
-
-                h4 {
-                    @include fluid-type (35px, 45px, 360px, 1950px);
-                    margin-bottom: 1.5rem;
-                    display: block;
-                    width: 100%;
-                }
-
-                p {
-                    line-height: 32px;
-                }
-
-
+                padding: 4rem;
             }
         }
     }
 }
+
 
 .comments {
     margin-top: 5rem;
@@ -115,7 +103,8 @@
         padding: 0;
 
         .commentImgDiv {
-            @include box (100px, 100px);margin: 4rem auto;
+            @include box (100px, 100px);
+            margin: 4rem auto;
 
         }
 
@@ -133,7 +122,10 @@
     .commentParent {
         margin-top: 2rem;
         border-bottom: 3px solid #227284;
-        margin-bottom: 5rem;
     }
 }
 
+.commentform {
+    margin-top: 6rem;
+
+}
