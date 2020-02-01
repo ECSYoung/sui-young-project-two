@@ -60,6 +60,7 @@ h1 {
 // ••• ABOUT SECTION/MAIN
 #About {
     height: 50vh;
+    width: 100vw;
     padding: calc(1vw * 2rem) 0;
     background: #F6F6F6;
     @include flexCenter;
@@ -71,9 +72,14 @@ h1 {
     }
 }
 
+.pMargin {
+    margin: 3rem 0;
+}
+
 // ••• ASIDENAV SECTION/MAIN
 .asidenav {
     background: #F6F6F6;
+    width: 100vw;
 
     img {
         width: 100%;
@@ -99,7 +105,7 @@ h1 {
 
         // blue circle
         .iconborder {
-            @include box (5rem, 5rem);
+            @include box (6rem, 6rem);
             border-radius: 50%;
             background: #B9DDE7;
             @include flexCenter;
@@ -107,7 +113,7 @@ h1 {
             align-self: flex-start;
 
             i {
-                font-size: 2rem;
+                font-size: 2.5rem;
                 margin: 0;
             }
         }
@@ -124,6 +130,7 @@ h1 {
 // ••• BLOG SECTION/MAIN
 #Blog {
     background: white;
+    width: 100vw;
 }
 
 .blogParentBox {
@@ -140,16 +147,21 @@ h1 {
     .blogImg {
         display: flex;
         justify-content: flex-end;
+        order: 1;
+    }
+
+    .blogImg2 {
+        order: 4;
     }
 
     .imgShadow {
         box-shadow: -150px 20px #227284, 20px 20px #227284;
-        @include shift (2rem, -5rem)
+        @include shift (1rem, -5rem)
     }
 
     .imgShadow2 {
         box-shadow: 150px 20px #B9DDE7, 20px 20px #B9DDE7;
-        @include shift (2rem, 5rem)
+        @include shift (-1rem, 5rem)
     }
 
     .textWidth2,
@@ -162,14 +174,14 @@ h1 {
     .textWidth3 {
         width: 90%;
         padding-left: 2%;
+        order: 3;
     }
 
     .textWidth2 {
         padding: 0 0 0 13%;
         width: 100%;
+        order: 2;
     }
-
-
 }
 
 
@@ -177,6 +189,7 @@ h1 {
 // ••• JOURNEY SECTION/MAIN
 .journey {
     height: 60vh;
+    width: 100vw;
     background: #F6F6F6;
     display: flex;
     justify-content: space-evenly;
@@ -204,6 +217,7 @@ h1 {
 // ••• GALLERY SECTION/MAIN
 .gallery {
     background: white;
+    width: 100vw;
 
     .galleryParent {
         margin: auto;

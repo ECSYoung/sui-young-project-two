@@ -44,24 +44,25 @@ h2 {
 }
 
 h3 {
-    @include fluid-type (18px, 22px, 360px, 1950px);
+    @include fluid-type (3rem, 5rem, 360px, 1950px);
     margin-bottom: 3rem;
     margin-top: 3rem;
 }
 
 h4 {
-    @include fluid-type (35px, 45px, 360px, 1950px);
+    @include fluid-type (3rem, 7rem, 360px, 1950px);
     margin-bottom: 1.5rem;
     display: block;
     width: 100%;
+    line-height: 4rem;
 }
 
 p { 
     font-family: 'Cabin', sans-serif;
-    @include fluid-type (2rem, 3.5rem, 360px, 1950px);
+    @include fluid-type (1.8rem, 5rem, 360px, 1950px);
     margin: 0;
     text-align: left;
-    line-height: 3rem;
+    line-height: 4rem;
 }
 
 li, 

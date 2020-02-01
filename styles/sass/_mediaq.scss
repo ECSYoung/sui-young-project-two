@@ -1,109 +1,72 @@
-// Media Queries
-// ** non need for @media (prefers-reduced-motion:reduce)
+// // Media Queries
+// // ** non need for @media (prefers-reduced-motion:reduce)
 
-// ••• Index.html media queries
-// ••• blog.html media queries
-// ••• contact.html
+// // ••• Index.html media queries
+// // ••• blog.html media queries
+// // ••• contact.html
 
 
-@media (max-width: 1360px) {
+@media (max-width: 980px) {
 
     // ••• blog.html media queries
-    .blogAside {
-        width: 100vw;
-        min-width: 100vw;
-        margin: 2rem;
-        background: white;
-        display: flex;
-        flex-direction: column;
-
-        .asideDiv {
-
-            h3 {
-                @include fluid-type (18px, 22px, 360px, 1950px);
-                margin-bottom: 3rem;
-            }
-
-            p {
-                margin: 0;
-                text-align: left;
-            }
-
-            a {
-                text-transform: none;
-                color: #68B0C1;
-            }
-        }
-
-        .aside2 {
-
-            li {
-                display: flex;
-            }
-
-
-        }
-    }
-
-    main {
-        width: 70%;
-        margin: 2rem 0 0 0;
-
-        .blogBox {
-            background: white;
-            border-bottom: 3px solid #227284;
-
-            h4 {
-                @include fluid-type (35px, 45px, 360px, 1950px);
-                margin-bottom: 1.5rem;
-                display: block;
-                width: 100%;
-            }
-
-            p {
-                line-height: 32px;
-            }
-
-
-        }
-    }
-
-
-    // ••• contact.html
-    .contactGrid {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 8rem;
-    }
-
-    .contactAside {
-        width: 100%;
-        order: 2;
-        margin-top: 3rem;
-    }
-
-    .contactSocialIcon {
-        padding: 0;
-        display: flex;
+    .blogFlex {
+        display: block;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
+        align-content: stretch;
+        align-items: flex-start;
+        margin: 8rem 0 0 0;
+        width: 100%;
 
-        ul {
-            display: flex;
+        .blogAside {
             width: 100%;
+            max-width: 380px;
+            min-width: 350px;
+            margin-right: 3rem;
 
-            li {
-                padding: 1rem;
+            .aside1 {
+                background: white;
+                padding: 4rem;
+                width: 100%;
+
+                a {
+                    color: $greyBlue;
+                }
+            }
+
+            .aside2 {
+                background: white;
+                padding: 4rem;
+                margin-top: 3rem;
+
+                li {
+                    display: flex;
+                }
+
+                ul li {
+                    list-style-type: none;
+                }
+
+                ul li:before {
+                    content: '\00b7';
+                    font-size: 40px;
+                    margin: 0 0.25rem;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        .blogMain {
+            width: 55%;
+
+            .blogBox {
+                background: white;
+                padding: 4rem;
             }
         }
     }
 
-    .contactMain {
-        width: 100%;
-    }
 
-    .contactList {
-        width: 100%;
-        text-align: center;
-    }
 }
