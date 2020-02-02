@@ -49,6 +49,61 @@
     }
 }
 
+@media (max-width: 950px) {
+    .contactMain {
+        width: 100%;       
+    }
+    .contactGrid {
+        flex-direction: column;
+    }
+
+    .contactAside {
+        width: 100%;
+        margin-bottom: 3rem;
+        order: 2;
+    }
+
+    .contactSocialIcon ul{
+        justify-content: center;
+    }
+
+    form {
+        width: 100%;
+        height: 60vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5rem 5rem 1fr 5rem;
+        grid-gap: 15px;
+        font-size: 2.5rem;
+        margin-bottom: 5rem;
+        margin-left: 0;
+        margin-right: 0;
+
+        .idField {
+            grid-area: 1 / span 2;
+            order: 2;
+        }
+
+        .idField {
+            grid-area: 1 / span 2;
+
+        }
+
+        .textField {
+            grid-area: 3 / span 2;
+        }
+
+        .commentButton {
+            grid-area: 4 / span 2;
+            width: 100%;
+        }
+    }
+
+    .pBreak2, .pBreak3 {
+        text-align: center;
+    }
+}
+
 
 @media (max-width: 680px) {
 
@@ -69,6 +124,9 @@
     }
 
     // end sourced code.
+    .navbar {
+        visibility: hidden;
+    }
 
     nav {
         position: fixed;
@@ -94,8 +152,8 @@
     #menuToggle {
         display: block;
         position: absolute;
-        top: 5rem;
-        right: 5rem;
+        top: 3rem;
+        right: 3rem;
         z-index: 3;
         -webkit-user-select: none;
         user-select: none;

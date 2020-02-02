@@ -96,6 +96,15 @@ button {
     text-transform: uppercase;
 }
 
+button:hover, button:focus {
+    box-shadow: 5px 5px 17px 0px rgba(0,0,0,0.92);
+}
+
+button:active {
+    box-shadow: inset 10px 5px 17px 0px rgba(0,0,0,0.92);
+}
+
+// accessibility focused hiding of labels.
 .visually-hidden:not(:focus):not(:active) { 
     position: absolute !important;
     height: 1px; 
@@ -105,6 +114,35 @@ button {
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap; /* added line */
 }
+
+/* Accessibility code for skip-link */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 1%;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    font-size: 3rem;
+    border-radius: 50px;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $blackColor;
+}
+
+.skip-link a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 2rem;
+}
+
+.skip-link:focus {
+    left: 5%;
+}
+
 
 .pBreak {
     display: block;

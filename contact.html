@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link favicon -->
+    <link rel="icon" href="./assets/favicon.ico" type="image/gif">
 
     <!-- Kit from Font Awesome -->
     <script src="https://kit.fontawesome.com/dfdc9c622d.js" crossorigin="anonymous"></script>
@@ -23,6 +25,10 @@
 </head>
 
 <body>
+    <a href="#contact" class="skip-link">
+        <div>Skip to Contact Form</div>
+    </a>
+
     <Header class="otherHeader2">
         <div class="navBar wrapper">
             <nav role="navigation">
@@ -56,7 +62,7 @@
     </Header>
 
     <section class="mainBody">
-        <div class="wrapper ">
+        <div id="contact" class="wrapper ">
             <section class="contactGrid">
                 <section class="contactAside">
 
@@ -91,14 +97,14 @@
                         <!-- 2x Input for name and email address -->
                         <label for="name" class="visually-hidden">Name:</label>
 
-                        <input placeholder="Name" type="text" required="true" id="name" class="idField">
+                        <input placeholder="&nbsp;Name" type="text" required="true" id="name" class="idField">
                     
                         <label for="email" class="visually-hidden">Email:</label>
-                        <input type="email" placeholder="Email address" required="true" id="email" class="idField">
+                        <input type="email" placeholder="&nbsp;Email address" required="true" id="email" class="idField2">
                     
                     
                         <!-- large textbox input for comment -->
-                        <textarea name="comments" placeholder="Message" cols="30" rows="10" class="textField"></textarea>
+                        <textarea name="comments" placeholder="&nbsp;Message" cols="30" rows="10" class="textField"></textarea>
                     
                         <button class="commentButton" type="submit">Post Comment</button>
                     </form>
