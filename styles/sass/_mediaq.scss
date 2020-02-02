@@ -6,60 +6,58 @@
 // // ••• contact.html
 
 
-@media (max-width: 980px) {
+@media (max-width: 1000px) {
 
     // ••• blog.html media queries
-    .blogFlex {
-        display: block;
-        flex-direction: row;
-        flex-wrap: wrap;
+
+    .mainBody .blogFlex {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-content: stretch;
-        align-items: flex-start;
-        margin: 8rem 0 0 0;
-        width: 100%;
+        width: 85vw;
 
         .blogAside {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            background-color: white;
             width: 100%;
-            max-width: 380px;
-            min-width: 350px;
+            max-width: 100%;
+            min-width: 360px;
             margin-right: 3rem;
-
+            margin-bottom: 3rem;
+            justify-content: center;
+        
             .aside1 {
                 background: white;
                 padding: 4rem;
-                width: 100%;
+                width: 50%;
+                display: flex;
+                flex-direction: row;
 
-                a {
-                    color: $greyBlue;
+                .asideImg {
+                    width: 450px;
+                    align-self: center;
+                    margin-right: 1rem;
+                }
+
+                .blogAsideImg {
+                    width: 100%;
                 }
             }
 
             .aside2 {
                 background: white;
                 padding: 4rem;
-                margin-top: 3rem;
-
-                li {
-                    display: flex;
-                }
-
-                ul li {
-                    list-style-type: none;
-                }
-
-                ul li:before {
-                    content: '\00b7';
-                    font-size: 40px;
-                    margin: 0 0.25rem;
-                    display: flex;
-                    align-items: center;
-                }
+                margin-top: 0rem;
+                width: 40%;
             }
         }
 
         .blogMain {
-            width: 55%;
+            display: block;
+            width: 85vw;
+
 
             .blogBox {
                 background: white;
@@ -67,6 +65,8 @@
             }
         }
     }
+}
 
-
+@media (max-width: 850px) {
+    
 }
