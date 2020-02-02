@@ -9,64 +9,209 @@
 @media (max-width: 1000px) {
 
     // ••• blog.html media queries
+    // button
+    label[for="toggle"] {
+        display: block;
+        top: -11rem;
+        left: 0rem;
+        z-index: 0;
+    }
 
-    .mainBody .blogFlex {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    input[name="toggle"]:checked+.blogAside {
+        left: 0rem;
+        transition: 0.5s ease-in-out;
+    }
+
+    .asideButton:hover {
+        transform: rotate(90deg);
+    }
+
+    .asideBar {
+        position: relative;
+    }
+
+    .blogAside {
+        position: absolute;
+        left: -200rem;
+        z-index: 1;
+    }
+
+    // widen main blog area to 100%
+    .blogMain {
+        display: block;
         width: 85vw;
 
-        .blogAside {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            background-color: white;
-            width: 100%;
-            max-width: 100%;
-            min-width: 360px;
-            margin-right: 3rem;
-            margin-bottom: 3rem;
-            justify-content: center;
-        
-            .aside1 {
-                background: white;
-                padding: 4rem;
-                width: 50%;
-                display: flex;
-                flex-direction: row;
 
-                .asideImg {
-                    width: 450px;
-                    align-self: center;
-                    margin-right: 1rem;
-                }
-
-                .blogAsideImg {
-                    width: 100%;
-                }
-            }
-
-            .aside2 {
-                background: white;
-                padding: 4rem;
-                margin-top: 0rem;
-                width: 40%;
-            }
-        }
-
-        .blogMain {
-            display: block;
-            width: 85vw;
-
-
-            .blogBox {
-                background: white;
-                padding: 4rem;
-            }
+        .blogBox {
+            background: white;
+            padding: 4rem;
         }
     }
 }
 
-@media (max-width: 850px) {
-    
+
+@media (max-width: 680px) {
+
+    /****** NAVIGATION STYLING ******/
+    // increase check box size for easier clicking source: https://stackoverflow.com/questions/306924/can-i-change-the-checkbox-size-using-css
+    input[type=checkbox] {
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(2);
+        /* IE */
+        -moz-transform: scale(2);
+        /* FF */
+        -webkit-transform: scale(2);
+        /* Safari and Chrome */
+        -o-transform: scale(2);
+        /* Opera */
+        transform: scale(2);
+        padding: 10px;
+    }
+
+    // end sourced code.
+
+    nav {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+
+        ul {
+            display: inline-block;
+
+
+            li {
+                margin: 5rem;
+
+                a {
+                    padding: 3rem;
+                    @include fluid-type (2.5rem, 5rem, 360px, 1950px);
+                }
+            }
+        }
+    }
+
+    #menuToggle {
+        display: block;
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+        z-index: 3;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        opacity: 0;
+        // hide input checkbox and place over the spans. Simulate the effect of an attached label.
+        z-index: 3;
+        -webkit-touch-callout: none;
+    }
+
+    // style spans for the hamburger menu
+    #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: $blackColor;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+    }
+
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+        z-index: 3;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    // Transform all the slices of hamburger into a crossmark. 
+    #menuToggle input:checked~span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: $blackColor;
+        z-index: 2;
+    }
+
+    // hide the middle one.
+    #menuToggle input:checked~span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+        z-index: 2;
+    }
+
+    #menuToggle input:checked~span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+        z-index: 2;
+    }
+
+
+    // Make this absolute positioned at the top left of the screen
+
+    #menu {
+        position: fixed;
+        right: 0rem;
+        width: 100vw;
+        height: 100vh;
+        margin: -100px 0 0 -100px;
+        padding: 20rem 0 90rem;
+        padding-top: 125px;
+        background: $greyBlue;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+        transform-origin: 25% 25%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        // z-index: 1;
+
+        ul {
+            display: block;
+            flex-direction: column;
+            width: 100%;
+
+            .headerH2 {
+                position: relative;
+                top: 0;
+            }
+
+            li {
+                margin: 1rem;
+                display: block;
+
+
+                a {
+                    padding: 1rem 2vw;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: $blackColor;
+
+                    &:hover {
+                        color: $duskGreen;
+                        ;
+                    }
+                }
+            }
+
+        }
+    }
+
+    // slide it in from the left
+    #menuToggle input:checked~ul {
+        transform: none;
+
+    }
 }

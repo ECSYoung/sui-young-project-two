@@ -24,75 +24,81 @@
     h1 {
         position: absolute;
         top: 48vh;
-        left: 8.5vw;
+        left: 13vw;
         @include fluid-type (60px, 100px, 360px, 1950px);
     }
+}
+
+label[for="toggle"] {
+    display: none;
+    top: -11rem;
+    left: 0rem;
+    z-index: 2;
 }
 
 // Put background to the main section of the body.
 .mainBody {
     background: #f6f6f6;
+}
 
-    .blogFlex {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: stretch;
-        align-items: flex-start;
-        margin: 8rem 0 0 0;
+.blogFlex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: flex-start;
+    margin: 8rem 0 0 0;
+    width: 100%;
+}
+
+.blogAside {
+    width: 28%;
+    max-width: 380px;
+    min-width: 350px;
+    margin-right: 3rem;
+
+    .aside1 {
+        background: white;
+        padding: 4rem;
         width: 100%;
 
-        .blogAside {
-            width: 28%;
-            max-width: 380px;
-            min-width: 350px;
-            margin-right: 3rem;
+        a {
+            color: $greyBlue;
+        }
+    }
 
-            .aside1 {
-                background: white;
-                padding: 4rem;
-                width: 100%;
+    .aside2 {
+        background: white;
+        padding: 4rem;
+        margin-top: 3rem;
 
-                a {
-                    color: $greyBlue;
-                }
-            }
-
-            .aside2 {
-                background: white;
-                padding: 4rem;
-                margin-top: 3rem;
-
-                li {
-                    display: flex;
-                }
-
-                ul li {
-                    list-style-type: none;
-                }
-
-                ul li:before {
-                    content: '\00b7';
-                    font-size: 40px;
-                    margin: 0 0.25rem;
-                    display: flex;
-                    align-items: center;
-                }
-            }
+        li {
+            display: flex;
         }
 
-        .blogMain {
-            width: 55%;
+        ul li {
+            list-style-type: none;
+        }
 
-            .blogBox {
-                background: white;
-                padding: 4rem;
-            }
+        ul li:before {
+            content: '\00b7';
+            font-size: 40px;
+            margin: 0 0.25rem;
+            display: flex;
+            align-items: center;
         }
     }
 }
 
+.blogMain {
+    width: 55%;
+
+    .blogBox {
+        background: white;
+        padding: 4rem;
+    }
+}
 
 .comments {
     margin-top: 5rem;
@@ -105,7 +111,6 @@
         .commentImgDiv {
             @include box (100px, 100px);
             margin: 4rem auto;
-
         }
 
         .commentText {

@@ -11,10 +11,9 @@
 
     <!-- Google Font Script -->
     <link href="https://fonts.googleapis.com/css?family=Cabin|Oswald:400,700&display=swap" rel="stylesheet">
-    <!-- 
-                font-family: 'Cabin', sans-serif;
-                font-family: 'Oswald', sans-serif;
-            -->
+
+    <!-- link to animate.css -->
+    <link rel="stylesheet" href="animate.min.css">
 
     <!-- link style sheet -->
     <link rel="stylesheet" type="text/css" href="./styles/sass/styles.css">
@@ -23,18 +22,32 @@
 </head>
 <body>
     <Header class="otherHeader">
-        <div class="navBar">
-            <nav>
-
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="index.html#About">about</a></li>
-                    <li><Span>
-                            <h2>Harper</h2>
-                        </Span></li>
-                    <li><a href="#"><span class="whiteActive">blog</span></a></li>
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
+        <div class="navBar wrapper">
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <!--
+                                A hidden checkbox is used as click reciever,
+                                so you can use the :checked selector on it.
+                                -->
+                    <input type="checkbox">
+            
+                    <!--
+                                Some spans to act as a hamburger.
+                                -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            
+                    <ul id="menu">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="#About">about</a></li>
+                        <li>
+                            <h2 class="headerH2">Harper</h2>
+                        </li>
+                        <li><a class="whiteActive" href="blog.html">blog</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
         <h1>Blog</h1>
@@ -43,30 +56,39 @@
     <section class="mainBody wrapper">
         <!-- div with flex -->
         <div class="blogFlex">
+            <div class="asideBar">
+                <!-- Dropdown button for aside content -->
+                <label for="toggle" class="asideButton">
+                    <h4><i class="fas fa-angle-right"></i></h4>
+                </label>
+                <input type="checkbox" id="toggle" name="toggle">
 
-            <!-- contains aside content -->
-            <aside class="blogAside">
-                <div class="aside1">
-                    <div class="asideImg">
-                        <img class="blogAsideImg" src="assets/blog-image-2.jpg" alt="Image of a young femme appearing person with their eyes closed laying on pale-grey-blue carpet, near where it meets a sky-blue sponge painted wall. Their hair is splayed, and their right arm is poised curved with their palm facing their head. Their left bent at the elbow and lightly touching the left side of their head, as though embracing the air.">
-                    </div>
-                
-                    <div class="aside1Text">
-                        <h3>About Harper</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, beatae! <a href="#">Find out more.</a></p>
-                    </div>
-                </div>
+                <!-- contains aside content -->
+                <aside class="blogAside">
 
-                <div class="aside2">
-                    <h3>Recent Posts</h3>
-                    <ul>
-                        <li><p>Lorem ipsum dolor sit amet.</p></li>
-                        <li><p>Lorem ipsum dolor sit amet.</p></li>
-                        <li><p>Lorem ipsum dolor sit amet.</p></li>
-                        <li><p>Lorem ipsum dolor sit amet.</p></li>
-                    </ul>
-                </div>
-            </aside>
+                    <!-- Aside content begins -->
+                    <div class="aside1">
+                        <div class="asideImg">
+                            <img class="blogAsideImg" src="assets/blog-image-2.jpg" alt="Image of a young femme appearing person with their eyes closed laying on pale-grey-blue carpet, near where it meets a sky-blue sponge painted wall. Their hair is splayed, and their right arm is poised curved with their palm facing their head. Their left bent at the elbow and lightly touching the left side of their head, as though embracing the air.">
+                        </div>
+                    
+                        <div class="aside1Text">
+                            <h3>About Harper</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, beatae! <a href="#">Find out more.</a></p>
+                        </div>
+                    </div>
+
+                    <div class="aside2">
+                        <h3>Recent Posts</h3>
+                        <ul>
+                            <li><p>Lorem ipsum dolor sit amet.</p></li>
+                            <li><p>Lorem ipsum dolor sit amet.</p></li>
+                            <li><p>Lorem ipsum dolor sit amet.</p></li>
+                            <li><p>Lorem ipsum dolor sit amet.</p></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
 
             <!-- Section for main section of blog -->
             <main class="blogMain">

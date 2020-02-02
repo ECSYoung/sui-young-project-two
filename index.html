@@ -18,16 +18,32 @@
 </head>
 <body>
     <Header>
-        <div class="wrapper headerDiv">
-            <nav>
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#About">about</a></li>
-                    <li><Span><h2>Harper</h2></Span></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
+        <div class="wrapper">
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <!--
+                    A hidden checkbox is used as click reciever,
+                    so you can use the :checked selector on it.
+                    -->
+                    <input type="checkbox">
+                
+                    <!--
+                    Some spans to act as a hamburger.
+                    -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <ul id="menu">
+                        <li><a class="whiteActive" href="#">home</a></li>
+                        <li><a href="#About">about</a></li>
+                        <li><h2 class="headerH2">Harper</h2></li>
+                        <li><a href="blog.html">blog</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
             </nav>
+        
             <div class="headerFlex">
                 <div class="headerFlexContainer">
                     <div class="headerimg">

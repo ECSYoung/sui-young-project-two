@@ -1,5 +1,5 @@
 // ○○○ Variables
-$duskGreem: #227284;
+$duskGreen: #227284;
 $lightBlueGrey: #B9DDE7;
 $greyBlue: #68B0C1;
 $accentColor: #F38D8D;
@@ -27,7 +27,7 @@ $whiteShadeColor: #F6F6F6;
 @mixin header {
     header {
         height: 80vh;
-        background-color: #B9DDE7;
+        background-color: $lightBlueGrey;
         display: flex;
         text-align: center;
     }
@@ -44,25 +44,25 @@ $whiteShadeColor: #F6F6F6;
     }
 }
 
-    // Taken from @site https://codepen.io/dbox/pen/meaMba (Mixin Fluid Type)
-    @mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 900px) {
+// Taken from @site https://codepen.io/dbox/pen/meaMba (Mixin Fluid Type)
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 900px) {
 
-        font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ((100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+    font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ((100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
 
-        @media screen and (max-width: $lower-range) {
-            font-size: $min-font-size;
-        }
-
-        @media screen and (min-width: $upper-range) {
-            font-size: $max-font-size;
-        }
+    @media screen and (max-width: $lower-range) {
+        font-size: $min-font-size;
     }
 
-    // Div padding
-    @mixin divPadding {
-        padding: 5rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin: 0 auto;
+    @media screen and (min-width: $upper-range) {
+        font-size: $max-font-size;
     }
+}
+
+// Div padding
+@mixin divPadding {
+    padding: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
