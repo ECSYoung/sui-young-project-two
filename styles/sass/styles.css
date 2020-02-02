@@ -497,15 +497,6 @@ nav ul li h2 {
   -webkit-touch-callout: none;
 }
 
-body {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: (1fr)[8];
-      grid-template-rows: repeat(8 1fr);
-}
-
 header {
   height: 80vh;
   background-color: #B9DDE7;
@@ -515,34 +506,12 @@ header {
   text-align: center;
 }
 
-.headerDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 .headerFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
-  top: 1vh;
+  top: 15vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 100%;
 }
 
@@ -558,7 +527,7 @@ header {
           align-items: center;
 }
 
-.headerimg {
+.headerImg {
   width: 25vw;
   height: 35vw;
   position: relative;
@@ -569,7 +538,7 @@ header {
   margin: 0 2rem;
 }
 
-.headerimg img {
+.headerImg img {
   -o-object-position: 23px 23px;
      object-position: 23px 23px;
   padding: 0 20px 20px 0;
@@ -1156,6 +1125,21 @@ footer {
 }
 
 @media (max-width: 1000px) {
+  header {
+    background: url(../../assets/home-image-1.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: 0 0.25px;
+    height: 80vh;
+  }
+  .headerImg {
+    display: none;
+  }
+  .headerFlexContainer {
+    height: 30vh;
+    background: #f6f6f65b;
+  }
   label[for="toggle"] {
     display: block;
     top: -11rem;

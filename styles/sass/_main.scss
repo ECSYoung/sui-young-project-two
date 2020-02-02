@@ -2,14 +2,6 @@
 // ◘◘◘◘ HOME PAGE ◘◘◘◘
 
 // ••• Header and Navigation 
-
-// try to convert index.html to CSS grid
-body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8 1fr);
-}
-
 header {
     height: 80vh;
     background-color: #B9DDE7;
@@ -17,15 +9,10 @@ header {
     text-align: center;
 }
 
-.headerDiv {
-    @include flexCenter;
-    flex-direction: column;
-}
-
 .headerFlex {
-    @include flexCenter;
     position: relative;
-    top: 1vh;
+    top: 15vh;
+    align-self: center;
     width: 100%;
 
     .headerFlexContainer {
@@ -34,7 +21,7 @@ header {
 }
 
 // Increase image size > parent div, padding to shift image right and down to hide white edges. Transform and shift container box with white background to simulate box-shadow.
-.headerimg {
+.headerImg {
     @include box (25vw, 35vw);
     position: relative;
     bottom: -5rem;

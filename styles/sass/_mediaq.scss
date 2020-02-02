@@ -7,6 +7,29 @@
 
 
 @media (max-width: 1000px) {
+    // ••• index.html media queries
+    // header
+    header {
+        background: url(../../assets/home-image-1.jpg);
+        background-size: 110%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-position: 0 0.25px;
+        height: 80vh;
+    }
+
+    .headerImg {
+        display: none;
+    }
+
+    .headerFlexContainer {
+        height: 30vh;
+        background: #f6f6f65b;
+
+    }
+
+    // 
+
 
     // ••• blog.html media queries
     // button
