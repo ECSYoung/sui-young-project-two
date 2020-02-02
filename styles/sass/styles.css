@@ -497,6 +497,15 @@ nav ul li h2 {
   -webkit-touch-callout: none;
 }
 
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[8];
+      grid-template-rows: repeat(8 1fr);
+}
+
 header {
   height: 80vh;
   background-color: #B9DDE7;
