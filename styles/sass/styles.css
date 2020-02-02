@@ -1220,13 +1220,10 @@ footer {
   form .idField {
     -ms-grid-row: 1;
     grid-area: 1 / span 2;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
   }
-  form .idField {
-    -ms-grid-row: 1;
-    grid-area: 1 / span 2;
+  form .idField2 {
+    -ms-grid-row: 2;
+    grid-area: 2 / span 2;
   }
   form .textField {
     -ms-grid-row: 3;
