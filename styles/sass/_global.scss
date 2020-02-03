@@ -151,3 +151,18 @@ button:active {
     margin: 3rem 0;
     word-wrap: break-word;
 }
+
+// "button" to bring view to top.
+.top {
+    position: fixed;
+    width: 6rem;
+    height: 6rem;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 4;
+    color: $blackColor;
+    animation-delay: 2s;
+    i {
+        font-size: 5rem;
+    }
+}

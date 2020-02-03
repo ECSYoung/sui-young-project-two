@@ -441,6 +441,22 @@ button:active {
   word-wrap: break-word;
 }
 
+.top {
+  position: fixed;
+  width: 6rem;
+  height: 6rem;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 4;
+  color: #171717;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.top i {
+  font-size: 5rem;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1229,12 +1245,6 @@ footer {
     left: -1rem;
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
-  }
-  .asideButton2 {
-    width: 6rem;
-    height: 5.5rem;
-    -webkit-box-shadow: 2px 2px #171717;
-            box-shadow: 2px 2px #171717;
   }
   .asideButton:hover {
     -webkit-transform: rotate(90deg);
