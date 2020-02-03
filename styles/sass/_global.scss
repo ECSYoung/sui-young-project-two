@@ -42,6 +42,8 @@ h1, h2, h3, h4, h5, a {
 h2 {
     @include fluid-type (4rem, 5rem, 360px, 1950px);
     margin: 0;
+    line-height: 4.5rem;
+
 }
 
 h3 {

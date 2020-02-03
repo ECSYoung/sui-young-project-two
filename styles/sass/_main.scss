@@ -40,12 +40,13 @@ header {
 
 
 h1 {
-    @include fluid-type (90px, 160px, 360px, 1950px);
+    @include fluid-type (70px, 160px, 360px, 1950px);
     margin: 0 5rem;
 }
 
 .headerCircle {
     width: calc(10.5vw + 2px);
+    min-width: 70px;
     position: relative;
     right: calc(10vw + 1.5px);
     bottom: calc(5vh + 1.5px);
@@ -199,15 +200,16 @@ h1 {
             @include shift (-5%, -5%);
         }
     }
+}
 
-    .textWidth {
-        width: 55%;
+.textWidth {
+    width: 55%;
 
-        h2 {
-            margin: 0;
-        }
+    h2 {
+        margin: 0;
     }
 }
+
 
 // ••• GALLERY SECTION/MAIN
 .gallery {
@@ -217,13 +219,15 @@ h1 {
     .galleryParent {
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-        grid-gap: 30px;
-        padding: 10rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 15px;
+        padding: 10rem 0;
+        width: 80%;
 
         .imgHouse {
             transition: transform 0.5s;
             margin: auto;
+            width: 70%;
 
             &:hover {
                 transform: scale(1.1);

@@ -277,6 +277,7 @@ h1, h2, h3, h4, h5, a {
 h2 {
   font-size: calc(4rem + 1 * ((100vw - 360px) / 1590));
   margin: 0;
+  line-height: 4.5rem;
 }
 
 @media screen and (max-width: 360px) {
@@ -550,13 +551,13 @@ header {
 }
 
 h1 {
-  font-size: calc(90px + 70 * ((100vw - 360px) / 1590));
+  font-size: calc(70px + 90 * ((100vw - 360px) / 1590));
   margin: 0 5rem;
 }
 
 @media screen and (max-width: 360px) {
   h1 {
-    font-size: 90px;
+    font-size: 70px;
   }
 }
 
@@ -568,6 +569,7 @@ h1 {
 
 .headerCircle {
   width: calc(10.5vw + 2px);
+  min-width: 70px;
   position: relative;
   right: calc(10vw + 1.5px);
   bottom: calc(5vh + 1.5px);
@@ -766,11 +768,11 @@ h1 {
           transform: translate(-5%, -5%);
 }
 
-.journey .textWidth {
+.textWidth {
   width: 55%;
 }
 
-.journey .textWidth h2 {
+.textWidth h2 {
   margin: 0;
 }
 
@@ -783,10 +785,11 @@ h1 {
   margin: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(360px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  grid-gap: 30px;
-  padding: 10rem;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 15px;
+  padding: 10rem 0;
+  width: 80%;
 }
 
 .gallery .galleryParent .imgHouse {
@@ -795,6 +798,7 @@ h1 {
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
   margin: auto;
+  width: 70%;
 }
 
 .gallery .galleryParent .imgHouse:hover {
@@ -1125,8 +1129,25 @@ footer {
 }
 
 @media (max-width: 1311px) {
+  #About {
+    height: 40vh;
+    position: relative;
+    top: -5rem;
+  }
   #About div {
-    width: 80%;
+    width: 85%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 5rem;
   }
   .blogImg {
     -ms-grid-row: 1;
@@ -1151,15 +1172,16 @@ footer {
     margin: auto;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(360px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     -ms-grid-rows: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 30px;
-    padding: 10rem;
+    grid-gap: 20px;
+    padding: 10rem 0;
+    width: 70%;
   }
   .imgHouse {
-    width: 50%;
+    width: 30%;
   }
   .img1 {
     -ms-grid-row: 1;
@@ -1178,10 +1200,10 @@ footer {
 @media (max-width: 1000px) {
   header {
     background: url(../../assets/home-image-1.jpg);
-    background-size: 110%;
+    background-size: 120%;
     background-position: center;
     background-repeat: no-repeat;
-    background-position: 0 0.25px;
+    background-position: 0 0.5px;
     height: 80vh;
   }
   .headerImg {
@@ -1285,6 +1307,24 @@ footer {
   .pBreak2, .pBreak3,
   .pBreak3 {
     text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .headerCircle {
+    width: calc(10.5vw + 2px);
+    min-width: 70px;
+    position: relative;
+    right: calc(13vw + 1.5px);
+    bottom: calc(3.5vh + 1.5px);
+  }
+  .journey {
+    height: 120vh;
+    width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -1448,6 +1488,17 @@ footer {
     -webkit-transform: none;
             transform: none;
   }
+  .headerCircle {
+    width: calc(10.5vw + 2px);
+    min-width: 70px;
+    position: relative;
+    right: calc(20vw + 1.5px);
+    bottom: calc(2.5vh + 1.5px);
+  }
+  #About {
+    top: -25rem;
+    padding-top: 5rem;
+  }
   .blogParentBox {
     display: -ms-grid;
     display: grid;
@@ -1455,6 +1506,17 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 15px;
     margin: 0 auto;
+  }
+  .text-Width {
+    width: 90vw;
+  }
+  .text-Width h2 {
+    line-height: 3rem;
+  }
+  .text-Width .minButton {
+    width: 20rem;
+    position: relative;
+    left: -2rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
