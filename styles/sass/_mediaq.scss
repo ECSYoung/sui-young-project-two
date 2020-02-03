@@ -6,6 +6,62 @@
 // // ••• contact.html
 
 
+@media (max-width: 1311px) {
+
+    // About section 
+    #About div {
+        width: 80%;
+    }
+
+    // blog section
+    .blogImg {
+        grid-area: 1;
+        margin-bottom: 1.5rem;
+    }
+
+    .blogImg2 {
+        grid-area: 3;
+        margin-bottom: 10rem;
+    }
+
+    .textWidth2 {
+        padding-left: 2%;
+        width: 100%;
+        grid-area: 2;
+    }
+
+    .textWidth3 {
+        margin-bottom: 5rem;
+    }
+
+    // Gallery section
+    .galleryParent {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        padding: 10rem;
+    }
+
+    .imgHouse {
+        width: 50%;
+    }
+
+    .img1 {
+        grid-area: 1;
+    }
+
+    .img2 {
+        grid-area: 2;
+    }
+
+    .img3 {
+        grid-area: 3;
+    }
+
+    }
+
 @media (max-width: 1000px) {
 
     // ••• index.html media queries
@@ -29,279 +85,295 @@
 
     }
 
-    // About section 
-    #About div {
-        width: 80%;
-    }
-
     // Aside Nav Quadrant section 
     .iconTextwidth {
         width: 100%;
+        text-align: left;
     }
 
-        // ••• blog.html media queries
-        // button
-        label[for="toggle"] {
-            display: block;
-            top: -11rem;
-            left: 0rem;
-            z-index: 0;
+    // ••• blog.html media queries
+    // button
+    label[for="toggle"] {
+        display: block;
+        top: -11rem;
+        left: 0rem;
+        z-index: 0;
+    }
+
+    input[name="toggle"]:checked+.blogAside {
+        left: 0rem;
+        transition: 0.5s ease-in-out;
+    }
+
+    .asideButton:hover {
+        transform: rotate(90deg);
+    }
+
+    .asideBar {
+        position: relative;
+    }
+
+    .blogAside {
+        position: absolute;
+        left: -200rem;
+        z-index: 1;
+    }
+
+    // widen main blog area to 100%
+    .blogMain {
+        display: block;
+        width: 85vw;
+
+
+        .blogBox {
+            background: white;
+            padding: 4rem;
+        }
+    }
+
+
+
+}
+
+@media (max-width: 950px) {
+    .contactMain {
+        width: 100%;
+    }
+
+    .contactGrid {
+        flex-direction: column;
+    }
+
+    .contactAside {
+        width: 100%;
+        margin-bottom: 3rem;
+        order: 2;
+    }
+
+    .contactSocialIcon ul {
+        justify-content: center;
+    }
+
+    form {
+        width: 100%;
+        height: 60vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5rem 5rem 1fr 5rem;
+        grid-gap: 15px;
+        font-size: 2.5rem;
+        margin-bottom: 5rem;
+        margin-left: 0;
+        margin-right: 0;
+
+        .idField {
+            grid-area: 1 / span 2;
         }
 
-        input[name="toggle"]:checked+.blogAside {
-            left: 0rem;
-            transition: 0.5s ease-in-out;
+        .idField2 {
+            grid-area: 2 / span 2;
+
         }
 
-        .asideButton:hover {
-            transform: rotate(90deg);
+        .textField {
+            grid-area: 3 / span 2;
         }
 
-        .asideBar {
-            position: relative;
+        .commentButton {
+            grid-area: 4 / span 2;
+            width: 100%;
         }
+    }
 
-        .blogAside {
-            position: absolute;
-            left: -200rem;
-            z-index: 1;
-        }
+    .pBreak2,
+    .pBreak3 {
+        text-align: center;
+    }
+}
 
-        // widen main blog area to 100%
-        .blogMain {
-            display: block;
-            width: 85vw;
+@media (max-width: 800px) {
+    // // ••• Index.html media queries
+
+    
+}
 
 
-            .blogBox {
-                background: white;
-                padding: 4rem;
+@media (max-width: 680px) {
+
+    // ••• navigation styling
+    // increase check box size for easier clicking source: https://stackoverflow.com/questions/306924/can-i-change-the-checkbox-size-using-css
+    input[type=checkbox] {
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(2);
+        /* IE */
+        -moz-transform: scale(2);
+        /* FF */
+        -webkit-transform: scale(2);
+        /* Safari and Chrome */
+        -o-transform: scale(2);
+        /* Opera */
+        transform: scale(2);
+        padding: 10px;
+    }
+
+    // end sourced code.
+    .navbar {
+        visibility: hidden;
+    }
+
+    nav {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+
+        ul {
+            display: inline-block;
+
+
+            li {
+                margin: 5rem;
+
+                a {
+                    padding: 3rem;
+                    @include fluid-type (2.5rem, 5rem, 360px, 1950px);
+                }
             }
         }
     }
 
-    @media (max-width: 950px) {
-        .contactMain {
-            width: 100%;
-        }
+    #menuToggle {
+        display: block;
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        z-index: 3;
+        -webkit-user-select: none;
+        user-select: none;
+    }
 
-        .contactGrid {
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        opacity: 0;
+        // hide input checkbox and place over the spans. Simulate the effect of an attached label.
+        z-index: 3;
+        -webkit-touch-callout: none;
+    }
+
+    // style spans for the hamburger menu
+    #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: $blackColor;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+    }
+
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+        z-index: 3;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    // Transform all the slices of hamburger into a crossmark. 
+    #menuToggle input:checked~span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: $blackColor;
+        z-index: 2;
+    }
+
+    // hide the middle one.
+    #menuToggle input:checked~span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+        z-index: 2;
+    }
+
+    #menuToggle input:checked~span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+        z-index: 2;
+    }
+
+
+    // Make this absolute positioned at the top left of the screen
+
+    #menu {
+        position: fixed;
+        right: 0rem;
+        width: 100vw;
+        height: 100vh;
+        margin: -100px 0 0 -100px;
+        padding: 20rem 0 90rem;
+        padding-top: 125px;
+        background: $greyBlue;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+        transform-origin: 25% 25%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        // z-index: 1;
+
+        ul {
+            display: block;
             flex-direction: column;
-        }
-
-        .contactAside {
             width: 100%;
-            margin-bottom: 3rem;
-            order: 2;
-        }
 
-        .contactSocialIcon ul {
-            justify-content: center;
-        }
-
-        form {
-            width: 100%;
-            height: 60vh;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 5rem 5rem 1fr 5rem;
-            grid-gap: 15px;
-            font-size: 2.5rem;
-            margin-bottom: 5rem;
-            margin-left: 0;
-            margin-right: 0;
-
-            .idField {
-                grid-area: 1 / span 2;
+            .headerH2 {
+                position: relative;
+                top: 0;
             }
 
-            .idField2 {
-                grid-area: 2 / span 2;
-
-            }
-
-            .textField {
-                grid-area: 3 / span 2;
-            }
-
-            .commentButton {
-                grid-area: 4 / span 2;
-                width: 100%;
-            }
-        }
-
-        .pBreak2,
-        .pBreak3 {
-            text-align: center;
-        }
-    }
-
-
-    @media (max-width: 680px) {
-
-        /****** NAVIGATION STYLING ******/
-        // increase check box size for easier clicking source: https://stackoverflow.com/questions/306924/can-i-change-the-checkbox-size-using-css
-        input[type=checkbox] {
-            /* Double-sized Checkboxes */
-            -ms-transform: scale(2);
-            /* IE */
-            -moz-transform: scale(2);
-            /* FF */
-            -webkit-transform: scale(2);
-            /* Safari and Chrome */
-            -o-transform: scale(2);
-            /* Opera */
-            transform: scale(2);
-            padding: 10px;
-        }
-
-        // end sourced code.
-        .navbar {
-            visibility: hidden;
-        }
-
-        nav {
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            right: 0;
-
-            ul {
-                display: inline-block;
-
-
-                li {
-                    margin: 5rem;
-
-                    a {
-                        padding: 3rem;
-                        @include fluid-type (2.5rem, 5rem, 360px, 1950px);
-                    }
-                }
-            }
-        }
-
-        #menuToggle {
-            display: block;
-            position: absolute;
-            top: 3rem;
-            right: 3rem;
-            z-index: 3;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        #menuToggle input {
-            display: block;
-            width: 40px;
-            height: 32px;
-            position: absolute;
-            top: -7px;
-            left: -5px;
-            opacity: 0;
-            // hide input checkbox and place over the spans. Simulate the effect of an attached label.
-            z-index: 3;
-            -webkit-touch-callout: none;
-        }
-
-        // style spans for the hamburger menu
-        #menuToggle span {
-            display: block;
-            width: 33px;
-            height: 4px;
-            margin-bottom: 5px;
-            position: relative;
-            background: $blackColor;
-            border-radius: 3px;
-            z-index: 1;
-            transform-origin: 4px 0px;
-            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
-        }
-
-
-        #menuToggle span:first-child {
-            transform-origin: 0% 0%;
-            z-index: 3;
-        }
-
-        #menuToggle span:nth-last-child(2) {
-            transform-origin: 0% 100%;
-        }
-
-        // Transform all the slices of hamburger into a crossmark. 
-        #menuToggle input:checked~span {
-            opacity: 1;
-            transform: rotate(45deg) translate(-2px, -1px);
-            background: $blackColor;
-            z-index: 2;
-        }
-
-        // hide the middle one.
-        #menuToggle input:checked~span:nth-last-child(3) {
-            opacity: 0;
-            transform: rotate(0deg) scale(0.2, 0.2);
-            z-index: 2;
-        }
-
-        #menuToggle input:checked~span:nth-last-child(2) {
-            transform: rotate(-45deg) translate(0, -1px);
-            z-index: 2;
-        }
-
-
-        // Make this absolute positioned at the top left of the screen
-
-        #menu {
-            position: fixed;
-            right: 0rem;
-            width: 100vw;
-            height: 100vh;
-            margin: -100px 0 0 -100px;
-            padding: 20rem 0 90rem;
-            padding-top: 125px;
-            background: $greyBlue;
-            list-style-type: none;
-            -webkit-font-smoothing: antialiased;
-            /* to stop flickering of text in safari */
-            transform-origin: 25% 25%;
-            transform: translate(-100%, 0);
-            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-            // z-index: 1;
-
-            ul {
+            li {
+                margin: 1rem;
                 display: block;
-                flex-direction: column;
-                width: 100%;
-
-                .headerH2 {
-                    position: relative;
-                    top: 0;
-                }
-
-                li {
-                    margin: 1rem;
-                    display: block;
 
 
-                    a {
-                        padding: 1rem 2vw;
-                        font-size: 2rem;
-                        font-weight: bold;
-                        color: $blackColor;
+                a {
+                    padding: 1rem 2vw;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: $blackColor;
 
-                        &:hover {
-                            color: $duskGreen;
-                            ;
-                        }
+                    &:hover {
+                        color: $duskGreen;
+                        ;
                     }
                 }
-
             }
-        }
-
-        // slide it in from the left
-        #menuToggle input:checked~ul {
-            transform: none;
 
         }
     }
+
+    // slide it in from the left
+    #menuToggle input:checked~ul {
+        transform: none;
+
+    }
+
+
+    // ••• Index.html media queries
+    // ••• blog section styling.
+
+    .blogParentBox {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 15px;
+        margin: 0 auto;
+    }
+}

@@ -83,14 +83,14 @@ h1 {
 
 // parent div to the content under the image
 .iconparent {
-    padding: 10rem;
+    padding: 10% 5%;
 }
 
 // parent div to 2 sections
 .flexIconParent {
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
     grid-gap: 15px;
 
     // i and circle
@@ -159,26 +159,26 @@ h1 {
         @include shift (-1rem, 5rem)
     }
 
-    .textWidth2,
-    .textWidth3 {
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-    }
-
-    .textWidth3 {
-        width: 90%;
-        padding-left: 2%;
-        order: 3;
-    }
-
-    .textWidth2 {
-        padding: 0 0 0 13%;
-        width: 100%;
-        order: 2;
-    }
 }
 
+.textWidth2,
+.textWidth3 {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.textWidth3 {
+    width: 90%;
+    padding-left: 2%;
+    order: 3;
+}
+
+.textWidth2 {
+    padding-left: 13%;
+    width: 100%;
+    order: 2;
+}
 
 
 // ••• JOURNEY SECTION/MAIN

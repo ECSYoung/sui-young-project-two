@@ -60,7 +60,7 @@ h4 {
 
 p { 
     font-family: 'Cabin', sans-serif;
-    @include fluid-type (1.5rem, 5rem, 360px, 1950px);
+    @include fluid-type (1.8rem, 5rem, 360px, 1950px);
     margin: 0;
     line-height: 4rem;
 }
