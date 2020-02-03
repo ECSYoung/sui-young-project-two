@@ -4,7 +4,7 @@
 // ••• Header and Navigation 
 header {
     height: 80vh;
-    background-color: #B9DDE7;
+    background-color: $lightBlueGrey;
     display: flex;
     text-align: center;
 }
@@ -58,7 +58,7 @@ h1 {
     height: 50vh;
     width: 100vw;
     padding: calc(1vw * 2rem) 0;
-    background: #F6F6F6;
+    background: $whiteShadeColor;
     @include flexCenter;
     justify-content: flex-end;
 
@@ -74,7 +74,7 @@ h1 {
 
 // ••• ASIDENAV SECTION/MAIN
 .asidenav {
-    background: #F6F6F6;
+    background: $whiteShadeColor;
     width: 100vw;
 
     img {
@@ -103,7 +103,7 @@ h1 {
         .iconborder {
             @include box (6rem, 6rem);
             border-radius: 50%;
-            background: #B9DDE7;
+            background: $lightBlueGrey;
             @include flexCenter;
             margin-right: 3rem;
             align-self: flex-start;
@@ -151,12 +151,12 @@ h1 {
     }
 
     .imgShadow {
-        box-shadow: -150px 20px #227284, 20px 20px #227284;
+        box-shadow: -150px 20px $duskGreen, 20px 20px $duskGreen;
         @include shift (1rem, -5rem)
     }
 
     .imgShadow2 {
-        box-shadow: 150px 20px #B9DDE7, 20px 20px #B9DDE7;
+        box-shadow: 150px 20px $lightBlueGrey, 20px 20px $lightBlueGrey;
         @include shift (-1rem, 5rem)
     }
 
@@ -186,14 +186,14 @@ h1 {
 .journey {
     height: 60vh;
     width: 100vw;
-    background: #F6F6F6;
+    background: $whiteShadeColor;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
     .journeyImage {
         @include box (30rem, 30rem);
-        background: #227284;
+        background: $duskGreen;
 
 
         img {

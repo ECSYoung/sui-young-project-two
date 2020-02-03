@@ -248,7 +248,7 @@ html {
 
 body {
   overflow-x: hidden;
-  background: #f6f6f6;
+  background: #F6F6F6;
 }
 
 .wrapper {
@@ -403,7 +403,6 @@ button:active {
   /* added line */
 }
 
-/* Accessibility code for skip-link */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -897,7 +896,7 @@ label[for="toggle"] {
 }
 
 .mainBody {
-  background: #f6f6f6;
+  background: #F6F6F6;
 }
 
 .blogFlex {
@@ -974,6 +973,7 @@ label[for="toggle"] {
 .blogMain .blogBox {
   background: white;
   padding: 4rem;
+  border-bottom: 3px solid #227284;
 }
 
 .comments {

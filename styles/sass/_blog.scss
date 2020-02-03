@@ -11,7 +11,7 @@
 
     .navBar {
         @include box (100vw, 7rem);
-        background: #B9DDE7;
+        background: $lightBlueGrey;
         display: flex;
         justify-content: center;
     }
@@ -38,9 +38,10 @@ label[for="toggle"] {
 
 // Put background to the main section of the body.
 .mainBody {
-    background: #f6f6f6;
+    background: $whiteShadeColor;
 }
 
+// display: flex the body of content
 .blogFlex {
     display: flex;
     flex-direction: row;
@@ -97,9 +98,12 @@ label[for="toggle"] {
     .blogBox {
         background: white;
         padding: 4rem;
+        border-bottom: 3px solid $duskGreen;
     }
 }
 
+
+// style comments sections of blog
 .comments {
     margin-top: 5rem;
 
@@ -127,7 +131,7 @@ label[for="toggle"] {
 
     .commentParent {
         margin-top: 2rem;
-        border-bottom: 3px solid #227284;
+        border-bottom: 3px solid $duskGreen;
     }
 }
 

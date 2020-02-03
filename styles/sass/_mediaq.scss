@@ -1,6 +1,7 @@
 // // Media Queries
-// // ** non need for @media (prefers-reduced-motion:reduce)
+// // ** no need for @media (prefers-reduced-motion:reduce)
 
+// SECTION TITLES
 // // ••• Index.html media queries
 // // ••• blog.html media queries
 // // ••• contact.html
@@ -184,7 +185,6 @@
 
         .idField2 {
             grid-area: 2 / span 2;
-
         }
 
         .textField {
@@ -354,7 +354,6 @@
         transform-origin: 25% 25%;
         transform: translate(-100%, 0);
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-        // z-index: 1;
 
         ul {
             display: block;
