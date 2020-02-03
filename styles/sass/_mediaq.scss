@@ -7,7 +7,7 @@
 
 
 @media (max-width: 1311px) {
-
+    // ••• index.html media queries
     // About section 
     #About {
         height: 40vh;
@@ -74,7 +74,7 @@
 
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1070px) {
 
     // ••• index.html media queries
     // header
@@ -113,8 +113,14 @@
     }
 
     input[name="toggle"]:checked+.blogAside {
-        left: 0rem;
+        left: -1rem;
         transition: 0.5s ease-in-out;
+    }
+
+    .asideButton2 {
+        width: 6rem;
+        height: 5.5rem;
+        box-shadow: 2px 2px $blackColor;
     }
 
     .asideButton:hover {
@@ -129,6 +135,7 @@
         position: absolute;
         left: -200rem;
         z-index: 1;
+        box-shadow: 3px 3px 5px $blackColor;
     }
 
     // widen main blog area to 100%
@@ -145,6 +152,7 @@
 }
 
 @media (max-width: 950px) {
+
     // contact form responsive
     .contactMain {
         width: 100%;
@@ -301,6 +309,7 @@
         z-index: 1;
         transform-origin: 4px 0px;
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+        box-shadow: 3px 3px 5px $whiteShadeColor;
     }
 
 
@@ -394,8 +403,8 @@
         width: calc(10.5vw + 2px);
         min-width: 70px;
         position: relative;
-        right: calc(20vw + 1.5px);
-        bottom: calc(2.5vh + 1.5px);
+        right: calc(14vw + 2%);
+        bottom: calc(2.8vh + 2%);
     }
 
     // about
@@ -424,5 +433,21 @@
             position: relative;
             left: -2rem;
         }
+    }
+
+    // Journey About section
+
+    .journey {
+        height: 120vh;
+        width: 100vw;
+        flex-direction: column;
+    }
+
+    .textWidth {
+        width: 80%;
+    }
+
+    .minButton {
+        width: 70%;
     }
 }
